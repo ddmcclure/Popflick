@@ -1,28 +1,87 @@
-nav {
-    background-color: red;
-    overflow: hidden;
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-nav ul {
-    list-style: none;
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Epilogue', sans-serif;
 }
 
-nav ul li {
-    float: left;
+.topnav a:hover {
+  background-color: #545454;
+  color: white;
 }
 
-nav ul li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 16px 20px;
-    text-decoration: none;
+.topnav a.active {
+  background-color: #e15c64;
+  color: white;
+}
+ 
+.topnav a:visited {
+	 color: white;
+  }
+ 
+header h1 {
+	margin: 0;
+	padding-top: 2.5%;
+	padding-bottom: 1.25%;
+	padding-left: 5.4%;
+	background-color: #333;
+	font-family: 'Epilogue', sans-serif;
+	background-image: url("img/popcorn.svg");
+	background-repeat: no-repeat;
+	background-size: 6vw;
+	font-size:2.25vw;
 }
 
-nav ul li a:hover {
-    background-color: white;
+p {
+	font-family: 'Epilogue', sans-serif;
 }
 
-.current {
-    background-color: white;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+	background-color: #333;
+	color: #f2f2f2;
+	
+}
+
+@media screen and (max-width: 403px) {
+ .topnav a {
+  margin: 0;
+  float: none;
+  width: 100%;
+}
+header h1 {
+	background-size: 8vw;
+	margin: 0;
+	padding-left: 15%;
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+}
+
+@media screen and (max-width: 700px) {
+
+header h1 {
+	margin: 0;
+	padding-left: 15%;
+}
+}
+
+
+  
