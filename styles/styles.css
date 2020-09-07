@@ -14,7 +14,7 @@ div.static {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   font-family: 'Epilogue', sans-serif;
 }
 
@@ -47,11 +47,33 @@ header h1 {
 
 p {
 	font-family: 'Epilogue', sans-serif;
+	font-size:1.5vw;
+	color: white;
+}
+q {
+	font-family: 'Epilogue', sans-serif;
+	font-size:1.5vw;
+	color: white;
+}
+h6 {
+	font-family: 'Epilogue', sans-serif;
+	font-size:2vw;
+	color: white;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	font-family: 'Epilogue', sans-serif;
+	background-color: #333;
+
+}
+
+.movie-reel-img {
+	background-image: url("img/movie2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6vw;
+	height: 250px;
 }
 
 header {
@@ -59,6 +81,98 @@ header {
 	color: #f2f2f2;
 	
 }
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #333;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: #e15c64;}
+
+.footerRight{
+	margin: 0;
+	float: right;
+	padding-top: 2%;
+	color: white;
+	
+}
+.footerLeft {
+	float: left;
+	padding-top: 4%;
+	padding-left: 2%;
+	color: white;
+}
+
+
+.footer {
+	background-color: #e15c64; 
+}
+
 
 @media screen and (max-width: 403px) {
  .topnav a {
