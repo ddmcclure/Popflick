@@ -97,13 +97,30 @@ header {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev{
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  width: 20px;
   margin-top: -30px;
   padding: 16px;
+  padding-left: 10%;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  margin-top: -30px;
+  padding: 16px;
+  padding-right: 10%;
   color: #888;
   font-weight: bold;
   font-size: 20px;
