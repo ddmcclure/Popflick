@@ -69,10 +69,13 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+<<<<<<< HEAD
 function makeScroll() {
  $('#arrow').click();
 }
 
+=======
+>>>>>>> 346a514a724f4d00c7344de951e52b564a3904c1
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName('mySlides');
@@ -82,15 +85,21 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
+<<<<<<< HEAD
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
+=======
+>>>>>>> 346a514a724f4d00c7344de951e52b564a3904c1
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' active ', '');
     }
   slides[slideIndex-1].style.display = 'block';
   dots[slideIndex-1].className += ' active ';
+<<<<<<< HEAD
   setTimeout(showSlides, 5000); // Change image every 5 seconds
 
 
+=======
+>>>>>>> 346a514a724f4d00c7344de951e52b564a3904c1
 }
 </script>";

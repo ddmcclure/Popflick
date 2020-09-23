@@ -1,5 +1,6 @@
 <?php
 require_once "header.php";
+<<<<<<< HEAD
 $showform = 1;
 $errormsg = 0;
 $erruname = "";
@@ -64,4 +65,27 @@ if($showform == 1) {
 
 <?php
 }
+=======
+try {
+    $sql = "SELECT CusFName, CusLName FROM Customers";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo "<table>
+        <tr><th>First Name</th><th>Last Name</th></tr>";
+        foreach($row as $row) {
+            echo "<td>" . $row['CusFName'] . "</td>";
+            echo "<td>" . $row['CusLName'] . "</td>";
+            echo "</tr>\n";
+        }
+    echo "</table>";
+}
+catch (PDOException $e) {
+    die($e->getMessage());
+}
+?>
+
+<?php
+>>>>>>> 346a514a724f4d00c7344de951e52b564a3904c1
 require_once "footer.php";

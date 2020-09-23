@@ -20,7 +20,10 @@ require_once "connect.inc.php";
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;700&display=swap" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+=======
+>>>>>>> 346a514a724f4d00c7344de951e52b564a3904c1
 </head>
 <header>
     <h1>Popflick</h1>
