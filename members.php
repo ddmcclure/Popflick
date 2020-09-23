@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $stmt->bindValue(':uname', $uname);
             $stmt->execute();
             $row = $stmt->fetch();
-            if($pwd == $row['CusPass']) {
+            if (password_verify($pwd, $row['CusPass'])) {
                 echo "<p class='success'>Login successful!</p>";
             }
             else {
