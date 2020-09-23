@@ -10,7 +10,6 @@ ini_set('date.timezone', 'America/New_York');
 date_default_timezone_set('America/New_York');
 
 require_once "connect.inc.php";
-require_once "functions.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +20,7 @@ require_once "functions.inc.php";
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
 </head>
 <header>
     <h1>Popflick</h1>
