@@ -60,6 +60,8 @@ if($showform == 1) {
         </table>
     </form>
 
+    <p>Not a member? <a href="createmember.php">Click here</a> to learn more about our membership program, and sign up to be a member!</p>
+
 <?php
 }
 require_once "footer.php";
