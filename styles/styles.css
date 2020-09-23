@@ -27,11 +27,11 @@ div.static {
   background-color: #e15c64;
   color: white;
 }
- 
+
 .topnav a:visited {
 	 color: white;
   }
- 
+
 header h1 {
 	margin: 0;
 	padding-top: 2.5%;
@@ -79,7 +79,7 @@ body {
 header {
 	background-color: #333;
 	color: #f2f2f2;
-	
+
 }
 
 
@@ -176,7 +176,7 @@ q {font-style: italic;}
 	float: right;
 	padding-top: 2%;
 	color: white;
-	
+
 }
 .footerLeft {
 	float: left;
@@ -185,9 +185,32 @@ q {font-style: italic;}
 	color: white;
 }
 
+.catalog{
+  z-index: -2;
+	background-color: #e15c64;
+	height: 600px;
+	width: 100%;
+	padding-top: 3%;
+}
+.catalogMovie {
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.aboutusblock {
+border-radius: 25px;
+background: #e15c64;
+padding: 20px;
+width: 5%;
+height: 5%;
+}
+
 
 .footer {
-	background-color: #e15c64; 
+	background: #e15c64;
 }
 
 
@@ -213,6 +236,3 @@ header h1 {
 	padding-left: 15%;
 }
 }
-
-
-  
