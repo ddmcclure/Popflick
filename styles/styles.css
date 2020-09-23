@@ -197,5 +197,13 @@ header h1 {
 }
 }
 
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
 
   

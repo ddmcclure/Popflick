@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     }
     else {
         try {
-            $sql = "SELECT * FROM Customers WHERE CusUName = :uname";
+            $sql = "SELECT * FROM Customers WHERE CusUsername = :uname";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':uname', $uname);
             $stmt->execute();
