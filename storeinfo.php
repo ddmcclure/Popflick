@@ -2,7 +2,10 @@
 include_once ("header.php");
 ?>
 
-    <div>
+  <center>
+
+
+    <div class="aboutusblock">
         <p>
             Are you tired of poor quality movies on Netflix? Does your streaming service of choice
             not have what you want to watch? Then look no further the lastest media service, Popflick!
@@ -15,6 +18,7 @@ include_once ("header.php");
             Popflick membership today!
         </p>
     </div>
+</center>
 
 <?php
 include_once ("footer.php");

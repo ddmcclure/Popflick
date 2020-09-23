@@ -2,6 +2,8 @@
 include_once ("header.php");
 ?>
 
+    <!--The div element for the map -->
+    <div id="map"></div>
     <div>
         <p>
             <!--Preferably use images here to signify location, phone, and email-->
@@ -10,7 +12,6 @@ include_once ("header.php");
             Feel free to visit our social media located at the bottom of this page as well, we'd love to hear from you!
         </p>
     </div>
-
+<script src = "scripts/PopflickMap.js"></script>
 <?php
 include_once ("footer.php");
-

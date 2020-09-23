@@ -189,12 +189,16 @@ q {font-style: italic;}
 }
 
 .aboutusblock {
-border-radius: 25px;
+border-radius: 15px;
 background: #e15c64;
 padding: 20px;
-width: 5%;
+width: 40%;
 height: 5%;
 }
+
+#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
 
 
 @media screen and (max-width: 403px) {
