@@ -45,6 +45,7 @@ header h1 {
 	font-size:2.25vw;
 }
 
+
 p {
 	font-family: 'Epilogue', sans-serif;
 	font-size:1.5vw;
@@ -194,6 +195,23 @@ background: #e15c64;
 padding: 20px;
 width: 40%;
 height: 5%;
+}
+
+.loginblock {
+border-radius: 15px;
+background: #e15c64;
+padding: 20px;
+width: 40%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 #map {

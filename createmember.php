@@ -108,7 +108,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $hashedpwd = password_hash($pwd, PASSWORD_BCRYPT);
 
         try{
-            $sql = "INSERT INTO Customers (CusFName, CusLName, CusUsername, CusPass, CusPhoneNum, 
+            $sql = "INSERT INTO Customers (CusFName, CusLName, CusUsername, CusPass, CusPhoneNum,
                     CusAddress, CusCity, CusState, CusZip, CusIsMember, CusEmail)
                     VALUES (:fname, :lname, :uname, :pwd, :phone, :address, :city, :stat, :zip, :member, :email)";
             $stmt = $pdo->prepare($sql);
@@ -134,8 +134,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 if ($showform == 1) {
     ?>
+    <center>
     <div>
-            <h2>Member Account Creation</h2>
+            <h1>Member Account Creation</h1>
     </div>
     <form name="memberform" id="memberform" method="POST" action="createmember.php">
     <h3>Account Information</h3>
@@ -208,6 +209,7 @@ if ($showform == 1) {
     <label for="zip">Zip Code:</label><input type="text" name="zip" id="zip" maxlength="5" size="50"><br>
     <input type="submit" name="submit" id="submit" value="Submit"/>
     </form>
+  </center>
 <?php
 }
 require_once "footer.php";
