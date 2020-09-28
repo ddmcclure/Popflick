@@ -45,6 +45,11 @@ header h1 {
 	font-size:2.25vw;
 }
 
+h1 {
+  font-family: 'Epilogue', sans-serif;
+  font-size:2vw;
+}
+
 
 p {
 	font-family: 'Epilogue', sans-serif;
@@ -160,6 +165,8 @@ q {font-style: italic;}
 	float: right;
 	padding-top: 2%;
 	color: white;
+  position: fixed;
+  bottom: 0;
 
 }
 .footerLeft {
@@ -169,10 +176,6 @@ q {font-style: italic;}
 	color: white;
 }
 
-
-.footer {
-	background-color: #e15c64;
-}
 
 .catalog{
   z-index: -2;
@@ -205,7 +208,7 @@ width: 40%;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
+  background-color: #333;
   border: none;
   color: white;
   padding: 16px 32px;

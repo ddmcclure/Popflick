@@ -135,6 +135,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($showform == 1) {
     ?>
     <center>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="loginblock">
     <div>
             <h1>Member Account Creation</h1>
     </div>
@@ -209,6 +212,7 @@ if ($showform == 1) {
     <label for="zip">Zip Code:</label><input type="text" name="zip" id="zip" maxlength="5" size="50"><br>
     <input type="submit" name="submit" id="submit" value="Submit"/>
     </form>
+  </div>
   </center>
 <?php
 }

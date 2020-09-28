@@ -40,9 +40,6 @@ include_once ("header.php");
             <p class="author">- Braveheart, 1995</p>
         </div>
 
-        <!-- Next/prev buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
     <!-- Dots/bullets/indicators -->
@@ -58,32 +55,55 @@ include_once ("header.php");
 include_once ("footer.php");
 
 echo "<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName('mySlides');
   var dots = document.getElementsByClassName('dot');
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-    slideIndex++;
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' active ', '');
-    }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
   slides[slideIndex-1].style.display = 'block';
-  dots[slideIndex-1].className += ' active ';
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  dots[slideIndex-1].className += ' active';
+  setTimeout(showSlides, 5000);
 }
 </script>";
+
+// echo "<script>
+// var slideIndex = 1;
+// showSlides(slideIndex);
+//
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+//
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+//
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName('mySlides');
+//   var dots = document.getElementsByClassName('dot');
+//   if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = 'none';
+//     }
+//     slideIndex++;
+//     for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(' active ', '');
+//     }
+//   slides[slideIndex-1].style.display = 'block';
+//   dots[slideIndex-1].className += ' active ';
+//   setTimeout(showSlides, 5000); // Change image every 5 seconds
+// }
+// </script>";

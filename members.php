@@ -44,6 +44,8 @@ if($showform == 1) {
 ?>
 
     <center>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="loginblock">
     <form name="login" id="login" method="POST" action="members.php">
         <table>
