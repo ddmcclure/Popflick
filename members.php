@@ -44,8 +44,7 @@ if($showform == 1) {
 ?>
 
     <center>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
     <div class="loginblock">
     <form name="login" id="login" method="POST" action="members.php">
         <table>
@@ -68,6 +67,7 @@ if($showform == 1) {
     <p>Not a member? <a href="createmember.php">Click here</a> to learn more about our membership program, and sign up to be a member!</p>
     </div>
   </center>
+  <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
 
 <?php
 }
