@@ -9,7 +9,7 @@ ini_set('display_errors', '1');
 ini_set('date.timezone', 'America/New_York');
 date_default_timezone_set('America/New_York');
 
-require_once "connect.inc.php";
+//require_once "connect.inc.php";
 require_once "functions.inc.php";
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ require_once "functions.inc.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Popflick - Home
     </title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;700&display=swap" rel="stylesheet">
 </head>
