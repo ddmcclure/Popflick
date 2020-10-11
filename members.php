@@ -30,6 +30,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $row = $stmt->fetch();
             if (password_verify($pwd, $row['CusPass'])) {
                 echo "<p class='success'>Login successful!</p>";
+                $_SESSION['ID'] = $row['CusID'];
+                $_SESSION['uname'] = $row['CusUsername'];
+                header("Location: confirm.php?state=2");
             }
             else {
                 echo "<p class='error'>The username and password you entered is not correct. Please try again.</p>";
