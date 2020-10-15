@@ -68,7 +68,6 @@ h6 {
 }
 
 body {
-	margin: 0;
 	font-family: 'Epilogue', sans-serif;
 	background-color: #333;
 
@@ -158,24 +157,23 @@ header {
 q {font-style: italic;}
 
 /* Add a blue color to the author */
-.author {color: #e15c64;}
-
-.footerRight{
-	margin: 0;
-	float: right;
-	padding-top: 2%;
-	color: white;
-  position: fixed;
-  bottom: 0;
-
+.author {
+  color: #e15c64;
 }
+
+.footer {
+  bottom:0;
+  color: white;
+}
+
 .footerLeft {
 	float: left;
-	padding-top: 4%;
-	padding-left: 2%;
-	color: white;
+  padding-top: 1%;
+  padding-left: 2%;
 }
-
+.footerRight {
+	float: right;
+}
 
 .catalog{
   z-index: -2;

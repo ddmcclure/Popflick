@@ -6,6 +6,7 @@ include_once ("header.php");
     <div id="map"></div>
     <div>
       <center>
+        <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
         <p>
             <!--Preferably use images here to signify location, phone, and email-->
             We are located at 127 Khale Street in Myrtle Beach South Carolina!<br>
@@ -14,6 +15,8 @@ include_once ("header.php");
         </p>
       </center>
     </div>
+    <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+
 <script src = "scripts/PopflickMap.js"></script>
 <?php
 include_once ("footer.php");

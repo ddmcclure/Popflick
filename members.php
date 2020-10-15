@@ -23,12 +23,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     }
     else {
         try {
-            $sql = "SELECT * FROM Customers WHERE CusUsername = :uname";
+            $sql = "SELECT * FROM Members WHERE Username = :uname";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':uname', $uname);
             $stmt->execute();
             $row = $stmt->fetch();
-            if (password_verify($pwd, $row['CusPass'])) {
+            if (password_verify($pwd, $row['Password'])) {
                 echo "<p class='success'>Login successful!</p>";
                 $_SESSION['ID'] = $row['CusID'];
                 $_SESSION['uname'] = $row['CusUsername'];
@@ -47,8 +47,7 @@ if($showform == 1) {
 ?>
 
     <center>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
     <div class="loginblock">
     <form name="login" id="login" method="POST" action="members.php">
         <table>
@@ -71,6 +70,7 @@ if($showform == 1) {
     <p>Not a member? <a href="createmember.php">Click here</a> to learn more about our membership program, and sign up to be a member!</p>
     </div>
   </center>
+  <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
 
 <?php
 }
