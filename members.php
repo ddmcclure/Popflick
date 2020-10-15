@@ -42,25 +42,32 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 if($showform == 1) {
 ?>
+
+    <center>
+      <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+    <div class="loginblock">
     <form name="login" id="login" method="POST" action="members.php">
         <table>
             <tr><th><label for="uname">Username:</label><span class="error">*</span></th>
-                <td><input name="uname" id="uname" type="text" placeholder="Username"
+                <td><input name="uname" required id="uname" type="text" placeholder="Username"
                     value="<?php if(isset($uname)) {
                         echo $uname;
                     }?>" /><span class="error"><?php if(isset($erruname)){echo $erruname;}?></span></td>
             </tr>
             <tr><th><label for="pwd">Password:</label><span class="error">*</span></th>
-                <td><input name="pwd" id="pwd" type="password" placeholder="Required Password"/>
+                <td><input name="pwd" required id="pwd" type="password" placeholder="Required Password"/>
                     <span class="error"><?php if(isset($errpwd)){echo $errpwd;}?></span></td>
             </tr>
-            <tr><th><label for="submit">Submit: </label></th>
+            <tr><th><label for="submit"></label></th>
                 <td><input type="submit" name="submit" id="submit" value="submit"/></td>
             </tr>
         </table>
     </form>
 
     <p>Not a member? <a href="createmember.php">Click here</a> to learn more about our membership program, and sign up to be a member!</p>
+    </div>
+  </center>
+  <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
 
 <?php
 }

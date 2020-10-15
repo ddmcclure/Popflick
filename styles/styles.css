@@ -27,11 +27,11 @@ div.static {
   background-color: #e15c64;
   color: white;
 }
- 
+
 .topnav a:visited {
 	 color: white;
   }
- 
+
 header h1 {
 	margin: 0;
 	padding-top: 2.5%;
@@ -44,6 +44,12 @@ header h1 {
 	background-size: 6vw;
 	font-size:2.25vw;
 }
+
+h1 {
+  font-family: 'Epilogue', sans-serif;
+  font-size:2vw;
+}
+
 
 p {
 	font-family: 'Epilogue', sans-serif;
@@ -62,7 +68,6 @@ h6 {
 }
 
 body {
-	margin: 0;
 	font-family: 'Epilogue', sans-serif;
 	background-color: #333;
 
@@ -79,7 +84,7 @@ body {
 header {
 	background-color: #333;
 	color: #f2f2f2;
-	
+
 }
 
 
@@ -152,26 +157,67 @@ header {
 q {font-style: italic;}
 
 /* Add a blue color to the author */
-.author {color: #e15c64;}
-
-.footerRight{
-	margin: 0;
-	float: right;
-	padding-top: 2%;
-	color: white;
-	
+.author {
+  color: #e15c64;
 }
-.footerLeft {
-	float: left;
-	padding-top: 4%;
-	padding-left: 2%;
-	color: white;
-}
-
 
 .footer {
-	background-color: #e15c64; 
+  bottom:0;
+  color: white;
 }
+
+.footerLeft {
+	float: left;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+.footerRight {
+	float: right;
+}
+
+.catalog{
+  z-index: -2;
+	background-color: #e15c64;
+	height: 600px;
+	width: 100%;
+	padding-top: 3%;
+}
+.catalogMovie {
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.aboutusblock {
+border-radius: 15px;
+background: #e15c64;
+padding: 20px;
+width: 40%;
+height: 5%;
+}
+
+.loginblock {
+border-radius: 15px;
+background: #e15c64;
+padding: 20px;
+width: 40%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
 
 
 @media screen and (max-width: 403px) {
@@ -204,6 +250,3 @@ header h1 {
 .success {
     color: green;
 }
-
-
-  
