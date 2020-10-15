@@ -92,7 +92,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $errmsg = 1;
     }
 
-    $sql = "SELECT * FROM Customers WHERE CusUsername = ?";
+    $sql = "SELECT * FROM Members WHERE Username = ?";
     $count = checkDup($pdo, $sql, $uname);
     if($count > 0) {
         $errmsg = 1;
@@ -108,9 +108,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $hashedpwd = password_hash($pwd, PASSWORD_BCRYPT);
 
         try{
-            $sql = "INSERT INTO Customers (CusFName, CusLName, CusUsername, CusPass, CusPhoneNum, 
-                    CusAddress, CusCity, CusState, CusZip, CusIsMember, CusEmail)
-                    VALUES (:fname, :lname, :uname, :pwd, :phone, :address, :city, :stat, :zip, :member, :email)";
+            $sql = "INSERT INTO Members (FirstName, LastName, Username, Password, PhoneNumber, 
+                    Address, City, MemState, Zip, Email, HasLateFee, Points)
+                    VALUES (:fname, :lname, :uname, :pwd, :phone, :address, :city, :stat, :zip, :email, :late, :points)";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':fname', $fname);
             $stmt->bindValue(':lname', $lname);
@@ -121,8 +121,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $stmt->bindValue(':city', $city);
             $stmt->bindValue(':stat', $stat);
             $stmt->bindValue(':zip', $zip);
-            $stmt->bindValue(':member', 1);
             $stmt->bindValue(':email', $email);
+            $stmt->bindValue(':late', 0);
+            $stmt->bindValue(':points', 0);
             $stmt->execute();
             $showform = 0;
             echo "<p class='success'>Thank you for entering your information.</p>";

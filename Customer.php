@@ -31,9 +31,11 @@ class Customer
 class Member extends Customer {
     private $username;
     private $password;
+    private $points;
 
-    function __construct($username, $password) {
+    function __construct($username, $password, $points) {
         $this->username = $username;
         $this->password = $password;
+        $this->points = $points;
     }
 }
