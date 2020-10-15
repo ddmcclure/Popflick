@@ -9,7 +9,7 @@ ini_set('display_errors', '1');
 ini_set('date.timezone', 'America/New_York');
 date_default_timezone_set('America/New_York');
 
-//require_once "connect.inc.php";
+require_once "connect.inc.php";
 require_once "functions.inc.php";
 ?>
 <!DOCTYPE html>
