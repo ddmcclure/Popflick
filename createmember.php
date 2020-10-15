@@ -174,43 +174,43 @@ if ($showform == 1) {
         echo "$errfname<br>";
     }
     ?>
-    <label for="fname">First Name:</label><input type="text" name="fname" id="fname" maxlength="255" size="50"><br>
+    <label for="fname">First Name:</label><input type="text" name="fname" id="fname" maxlength="255" size="50" value="<?php if(isset($fname)) {echo $fname;}?>"><br>
     <?php
     if (isset($errlname)) {
         echo "$errlname<br>";
     }
     ?>
-    <label for="lname">Last Name:</label><input type="text" name="lname" id="lname" maxlength="255" size="50"><br>
+    <label for="lname">Last Name:</label><input type="text" name="lname" id="lname" maxlength="255" size="50" value="<?php if(isset($lname)) {echo $lname;}?>"><br>
     <?php
     if (isset($errphone)) {
         echo "$errphone<br>";
     }
     ?>
-    <label for="phone">Phone Number:</label><input type="text" name="phone" id="phone" maxlength="10" size="50"><br>
+    <label for="phone">Phone Number:</label><input type="text" name="phone" id="phone" maxlength="10" size="50" value="<?php if(isset($phone)) {echo $phone;}?>"><br>
     <?php
     if (isset($erraddress)) {
         echo "$erraddress<br>";
     }
     ?>
-    <label for="address">Address</label><input type="text" name="address" id="address" maxlength="255" size="50"><br>
+    <label for="address">Address</label><input type="text" name="address" id="address" maxlength="255" size="50" value="<?php if(isset($address)) {echo $address;}?>"><br>
     <?php
     if (isset($errcity)) {
         echo "$errcity<br>";
     }
     ?>
-    <label for="city">City:</label><input type="text" name="city" id="city" maxlength="255" size="50"><br>
+    <label for="city">City:</label><input type="text" name="city" id="city" maxlength="255" size="50" value="<?php if(isset($city)) {echo $city;}?>"><br>
     <?php
     if (isset($errstat)) {
         echo "$errstat<br>";
     }
     ?>
-    <label for="stat">State:</label><input type="text" name="stat" id="stat" maxlength="2" size="50"><br>
+    <label for="stat">State:</label><input type="text" name="stat" id="stat" maxlength="2" size="50" value="<?php if(isset($stat)) {echo $stat;}?>"><br>
     <?php
     if (isset($errzip)) {
         echo "$errzip<br>";
     }
     ?>
-    <label for="zip">Zip Code:</label><input type="text" name="zip" id="zip" maxlength="5" size="50"><br>
+    <label for="zip">Zip Code:</label><input type="text" name="zip" id="zip" maxlength="5" size="50" value="<?php if(isset($zip)) {echo $zip;}?>"><br>
     <input type="submit" name="submit" id="submit" value="Submit"/>
     </form>
   </div>
