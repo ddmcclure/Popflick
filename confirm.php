@@ -1,14 +1,14 @@
 <?php
-require_once "header.inc.php";
+require_once "header.php";
 if ($_GET['state'] == 1) {
     echo "You have successfully logged out. <br>";
-    echo "<a href='login.php'>Log in</a>";
+    echo "<a href='members.php'>Log in</a>";
 }
 elseif ($_GET['state'] == 2) {
     echo "Welcome $_SESSION[uname]";
 }
 else {
-    echo "Choose an option from the menu.";
+    echo "<h1>You are not supposed to be here.</h1>";
 }
 
-require_once "footer.inc.php";
+require_once "footer.php";
