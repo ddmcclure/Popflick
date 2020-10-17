@@ -13,6 +13,7 @@ $errcity = "";
 $errstat = "";
 $errzip = "";
 $erremail = "";
+$errpoints = "";
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $fname = $_POST['fname'];
@@ -26,6 +27,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $zip = $_POST['zip'];
     $email = $_POST['email'];
     $pwd2 = $_POST['conpass'];
+    $lateFee = 0;
+    $points = $_POST['points'];
 
     if (empty($fname)) {
         $errfname = "<span class='error'>Your first name is required</span>";
@@ -82,6 +85,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $errmsg = 1;
     }
 
+    if (isset($_POST['lateFee']) && ($_POST['lateFee'] == 1)) {
+        $lateFee = 1;
+    }
+
+    if (empty($points)) {
+        $errpoints = "<span class='error'>Please enter amount of points</span>";
+        $errmsg = 1;
+    }
+
     if ($pwd != $pwd2) {
         $errpwd2 = "<span class='error'>The passwords do not match</span>";
         $errmsg = 1;
@@ -122,11 +134,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $stmt->bindValue(':stat', $stat);
             $stmt->bindValue(':zip', $zip);
             $stmt->bindValue(':email', $email);
-            $stmt->bindValue(':late', 0);
-            $stmt->bindValue(':points', 0);
+            $stmt->bindValue(':late', $lateFee);
+            $stmt->bindValue(':points', $points);
             $stmt->execute();
             $showform = 0;
             echo "<p class='success'>Thank you for entering your information.</p>";
+            echo "<p><a href='members.php'>Log In</a></p>";
         }
         catch (PDOException $e) {
             die($e->getMessage());
@@ -161,7 +174,7 @@ if ($showform == 1) {
         echo "$errpwd<br>";
     }
     ?>
-    <label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>"><br>
+    <label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>"><br><br>
     <?php
     if (isset($errpwd2)) {
         echo "$errpwd2<br>";
@@ -211,6 +224,14 @@ if ($showform == 1) {
     }
     ?>
     <label for="zip">Zip Code:</label><input type="text" name="zip" id="zip" maxlength="5" size="50" value="<?php if(isset($zip)) {echo $zip;}?>"><br>
+    <h3>Testing Purposes Only</h3>
+        <label for="lateFee">Has a Late Fee:</label><input type="checkbox" name="lateFee" id="lateFee" value="1"><br>
+        <?php
+        if (isset($errpoints)) {
+            echo "$errpoints<br>";
+        }
+        ?>
+        <label for="points">Points:</label><input type="text" name="points" id="points" maxlength="5" size="50" value="<?php if(isset($points)) {echo $points;}?>"><br>
     <input type="submit" name="submit" id="submit" value="Submit"/>
     </form>
   </div>
