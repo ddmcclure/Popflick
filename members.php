@@ -5,6 +5,48 @@ $errormsg = 0;
 $erruname = "";
 $errpwd = "";
 
+if(isset($_SESSION['ID'])) {
+    $showform = 0;
+    echo "<h1>Member Account Information</h1>";
+    try {
+        $sql = "SELECT * FROM Members WHERE ID = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':id', $_SESSION['ID']);
+        $stmt->execute();
+        $row = $stmt->fetch();
+    }
+    catch (PDOException $e) {
+        die($e->getMessage());
+    }
+    $fname = $row['FirstName'];
+    $lname = $row['LastName'];
+    $uname = $row['Username'];
+    $phone = $row['PhoneNumber'];
+    $address = $row['Address'];
+    $city = $row['City'];
+    $stat = $row['MemState'];
+    $zip = $row['Zip'];
+    $signUp = $row['SignUpDate'];
+    $email = $row['Email'];
+    $lateFee = $row['HasLateFee'];
+    $points = $row['Points'];
+
+    echo "<p>Name: $fname $lname</p>";
+    echo "<p>Username: $uname</p>";
+    echo "<p>Email: $email</p>";
+    echo "<p>Phone Number: $phone</p>";
+    echo "<p>Address: $address, $city $stat, $zip";
+    echo "<p>Account Created: $signUp</p>";
+    echo "<p>Late Fee on Account: ";
+    if ($lateFee == 0) {
+        echo "No</p>";
+    }
+    else {
+        echo "Yes</p>";
+    }
+    echo "<p>Points Available: $points";
+}
+
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $uname = trim(strtolower($_POST['uname']));
     $pwd = $_POST['pwd'];
