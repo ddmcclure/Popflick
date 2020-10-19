@@ -15,5 +15,6 @@ Work Divided Into Parts:
 * Contact Us Page - Devin McClure/Blakely Parker
 * Logout Page - Devin McClure
 * Confirm Page - Devin McClure
+* Database Connection File - Devin McClure
 
 Project can be accessed at: http://ccuresearch.coastal.edu/ddmcclure/csci490/Popflick/
