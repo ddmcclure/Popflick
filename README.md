@@ -13,3 +13,5 @@ Work Divided Into Parts:
 * Rewards Page - Devin McClure
 * About Page - Devin McClure
 * Contact Us Page - Devin McClure/Blakely Parker
+
+Project can be accessed at: http://ccuresearch.coastal.edu/ddmcclure/csci490/Popflick/
