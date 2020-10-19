@@ -29,11 +29,11 @@ require_once "connect.inc.php";
     <?php
     echo ($currentfile == "index.php") ? "<a class='active' href='index.php'>Home</a>" : "<a href='index.php'>Home</a>";
     echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
-    echo ($currentfile == "emplopyeelogin.php") ? "<a class='active' href='emplopyeelogin.php'>Login</a>" : "<a href='emplopyeelogin.php'>Login</a>";
+    echo ($currentfile == "employeelogin.php") ? "<a class='active' href='employeelogin.php'>Login</a>" : "<a href='employeelogin.php'>Login</a>";
     //if ($_SESSION['emp_accesslvl'] == 3){
     echo ($currentfile == "createemployee.php") ? "<a class='active' href='createemployee.php'>Create Employee</a>" : "<a href='createemployee.php'>Create Employee</a>";
     //}
-    if (isset($_SESSION['ID'])) {
+    if (isset($_SESSION['emp_id'])) {
         echo($currentfile == "logout.php") ? "<a class='active' href='logout.php'>Logout</a>" : "<a href='logout.php'>Logout</a>";
     }
     ?>

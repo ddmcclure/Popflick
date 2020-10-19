@@ -5,7 +5,7 @@ $errormsg = 0;
 $erruname = "";
 $errpwd = "";
 
-if(isset($_SESSION['ID'])) {
+if(isset($_SESSION['emp_id'])) {
     $showform = 0;
     echo "<h1>Employee Information</h1>";
     try {
@@ -46,14 +46,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     }
     else {
         try {
-            $sql = "SELECT * FROM employee WHERE Username = :emp_user";
+            $sql = "SELECT * FROM employee WHERE emp_user = :uname";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':emp_user', $uname);
             $stmt->execute();
             $row = $stmt->fetch();
             if (password_verify($pwd, $row['emp_pass'])) {
                 echo "<p class='success'>Login successful!</p>";
-                $_SESSION['ID'] = $row['emp_id'];
+                $_SESSION['emp_id'] = $row['emp_id'];
                 $_SESSION['uname'] = $row['emp_user'];
                 header("Location: confirm.php?state=2");
             }
@@ -72,7 +72,7 @@ if($showform == 1) {
     <center>
       <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
     <div class="loginblock">
-    <form name="login" id="login" method="POST" action="members.php">
+    <form name="login" id="login" method="POST" action="emplopyeelogin.php">
         <table>
             <tr><th><label for="uname">Username:</label><span class="error">*</span></th>
                 <td><input name="uname" required id="uname" type="text" placeholder="Username"
