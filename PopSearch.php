@@ -24,10 +24,12 @@ include_once "header.php";
 
 <br>
 
-<img src="/img/popcorn.svg" class="center">
-<br>
-<a href="surpriseMe.php"><button>Surprise Me</button></a>
-
 <?php
+	if (isset($_SESSION['emp_id'])) {
+		<img src="/img/popcorn.svg" class="center">
+		<br>
+		<a href="EditCat.php"><button>Edit Catalog</button></a>
+	}
+
 include_once "footer.php";
 
