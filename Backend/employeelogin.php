@@ -49,7 +49,7 @@ if(isset ($_POST['submit'])) { //when the user hits the submit button
 			$confirmedpw = $row['emp_pass']; //get users password
 			if (password_verify($formfield['ffpassword'], $confirmedpw)) //if users password matches one entered into form
 			{
-        echo '<p>AHHHHHH</p>';
+
 				$_SESSION['emploginid']= $row['emp_id']; //set session variables for the staff id
         $_SESSION['emploginname'] = $row['emp_user']; //set session variables for the staff first name
 				$_SESSION['emploginaccess'] = $row['emp_accesslvl'];  //set session variables for the staff permissions

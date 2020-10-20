@@ -215,6 +215,13 @@ font-family: 'Epilogue', sans-serif;
 font-weight: bold;
 }
 
+.smallloginblock {
+border-radius: 15px;
+background: #e15c64;
+padding: 20px;
+width: 30%;
+}
+
 td {
   font-family: 'Epilogue', sans-serif;
   font-weight: bold;
