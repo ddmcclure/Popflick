@@ -49,7 +49,11 @@ h1 {
   font-family: 'Epilogue', sans-serif;
   font-size:2vw;
 }
-
+h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-size:2.5vw;
+  color: #f2f2f2;
+}
 
 p {
 	font-family: 'Epilogue', sans-serif;
@@ -195,6 +199,7 @@ q {font-style: italic;}
 .aboutusblock {
 border-radius: 15px;
 background: #e15c64;
+color: #333;
 padding: 20px;
 width: 40%;
 height: 5%;
@@ -203,8 +208,15 @@ height: 5%;
 .loginblock {
 border-radius: 15px;
 background: #e15c64;
+color: #333;
 padding: 20px;
 width: 40%;
+font-family: 'Epilogue', sans-serif;
+}
+
+td {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: bold;
 }
 
 input[type=button], input[type=submit], input[type=reset] {

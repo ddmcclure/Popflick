@@ -40,30 +40,30 @@ if(isset ($_POST['submit'])) { //when the user hits the submit button
 
 		if($count < 1) //if the count of the returned information is less than one, that means there is no info connected to the email entered
 		{
-			echo '<p>The email or password is incorrect</p>'; //print error
+			echo '<p>The username or password is incorrect</p>'; //print error
 		}
 		else
 		{
 			$row = $s->fetch(); //fetch all data from the database
 
 			$confirmedpw = $row['emp_pass']; //get users password
-
 			if (password_verify($formfield['ffpassword'], $confirmedpw)) //if users password matches one entered into form
 			{
+        echo '<p>AHHHHHH</p>';
 				$_SESSION['emploginid']= $row['emp_id']; //set session variables for the staff id
         $_SESSION['emploginname'] = $row['emp_user']; //set session variables for the staff first name
 				$_SESSION['emploginaccess'] = $row['emp_accesslvl'];  //set session variables for the staff permissions
 				$_SESSION['empemployed'] = $row['emp_employed'];  //set session variables for the staff empolyed status
 				$showform = 0; //hide the form field information
 				echo "<br>";
-                echo "Logged In Successfully"; //tell user that login was su
+                echo "<p>Logged In Successfully</p>"; //tell user that login was successful
 				echo "<br>";
 				echo '<script>window.location = "index.php";</script>'; //redirect to set URL
 				echo "<br>";
 			}
 			else
 			{
-				echo '<center><p>The email or password you entered is incorrect</p></center>'; //if password incorrect throw ambiguous incorrect error
+				echo '<center><p>The username or password you entered is incorrect</p></center>'; //if password incorrect throw ambiguous incorrect error
 			}
 		}
 	}
@@ -80,7 +80,7 @@ if($showform == 1) //if  user hasn't logged in
 <div>
         <h1>Employee Login</h1>
 </div>
-<p>You are not logged in.  Please log in</p>
+<!-- <p>You are not logged in.  Please log in</p> -->
 
 <form name = "loginForm" id = "loginForm" method = "post" action = "employeelogin.php">
 	<table>
@@ -91,7 +91,7 @@ if($showform == 1) //if  user hasn't logged in
 			<td>Password:</td>
 			<td><input type="password" name="password" id = "password" required></td>
 		</tr><tr>
-			<td>Submit:</td>
+			<td></td>
 			<td><input type ="submit" class="button" name= "submit" value = "submit"></td>
 		</tr>
 	</table>
