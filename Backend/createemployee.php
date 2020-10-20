@@ -66,18 +66,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $hashedpwd = password_hash($pwd, PASSWORD_BCRYPT);
 
         try{
-            $sql = "INSERT INTO employee (emp_fname, emp_lname, emp_uname, emp_pass, emp_accesslvl)
-                    VALUES (:fname, :lname, :uname, :pwd, :accesslvl)";
+            $sql = "INSERT INTO employee (emp_fname, emp_lname, emp_user, emp_pass, emp_accesslvl)
+                    VALUES (?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(':fname', $fname);
-            $stmt->bindValue(':lname', $lname);
-            $stmt->bindValue(':uname', $uname);
-            $stmt->bindValue(':pwd', $hashedpwd);
-            $stmt->bindValue(':pwd', $accesslvl);
+            $stmt->bindValue('1', $fname);
+            $stmt->bindValue('2', $lname);
+            $stmt->bindValue('3', $uname);
+            $stmt->bindValue('4', $hashedpwd);
+            $stmt->bindValue('5', $accesslvl);
             $stmt->execute();
             $showform = 0;
             echo "<p class='success'>Thank you for entering your information.</p>";
-            echo "<p><a href='members.php'>Log In</a></p>";
+            echo "<p><a href='index.php'>Log In</a></p>";
         }
         catch (PDOException $e) {
             die($e->getMessage());
