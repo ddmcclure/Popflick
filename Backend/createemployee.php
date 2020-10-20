@@ -6,6 +6,7 @@ $errfname = "";
 $errlname = "";
 $erruname = "";
 $errpwd = "";
+$erraccesslvl = "";
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $fname = $_POST['fname'];
@@ -49,6 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $errpwd2 = "<span class='error'>The passwords do not match</span>";
         $errmsg = 1;
     }
+
 
     $sql = "SELECT * FROM employee WHERE emp_user = ?";
     $count = checkDup($pdo, $sql, $uname);
@@ -124,12 +126,20 @@ if ($showform == 1) {
     }
     ?>
     <br><label for="conpass">Confirm Password:</label><input type="password" name="conpass" id="conpass" maxlength="255" size="50">
-    <br><br><label for="pass">Access Level:</label><input type="text" name="accesslvl" id="accesslvl" maxlength="255" size="50" value="<?php if(isset($accesslvl)) {echo $accesslvl;}?>"><br><br>
+    <br>
     <?php
-    if (isset($errpwd2)) {
-        echo "$errpwd2<br>";
+    if (isset($erraccesslvl)) {
+        echo "$erraccesslvl<br>";
     }
     ?>
+    <p>Please select Access Level:</p>
+    <input type="radio" id="1" name="accesslvl" value="1">
+    <label for="1">Entry Level</label>
+    <input type="radio" id="2" name="accesslvl" value="2">
+    <label for="2">Associate</label>
+    <input type="radio" id="3" name="accesslvl" value="3">
+    <label for="3">Manager</label>
+    <br>
 
     <br><input type="submit" name="submit" id="submit" value="Submit"/>
     </form>
