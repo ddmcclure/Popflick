@@ -2,7 +2,7 @@
 require_once "header.php";
 $errmsg = 0;
 $success = 0;
-echo "<h1>Member Rewards</h1>";
+echo "<center><h2>Member Rewards</h2>";
 try {
     $sql = "SELECT * FROM Members WHERE ID = :id";
     $stmt = $pdo->prepare($sql);
@@ -96,7 +96,7 @@ if ($lateFee == 1) {
                 <p>Cost: 50 points</p>
                 <label for='reward'><input name='reward' id='reward' type='hidden' value='forgive'></label>
                 <input type='submit' name='submit' id='submit' value='Redeem'/>
-            </form>         
+            </form>
           </div><br>";
 }
 else {
@@ -107,7 +107,7 @@ else {
                 <p>Cost: 0 points</p>
                 <label for='reward'><input name='reward' id='reward' type='hidden' value='late'></label>
                 <input type='submit' name='submit' id='submit' value='Redeem'/>
-            </form>         
+            </form>
           </div><br>";
 }
 echo "<div class='aboutusblock'>
@@ -117,7 +117,7 @@ echo "<div class='aboutusblock'>
                 <p>Cost: 25 points</p>
                 <label for='reward'><input name='reward' id='reward' type='hidden' value='free'></label>
                 <input type='submit' name='submit' id='submit' value='Redeem'/>
-            </form>         
+            </form>
           </div><br>";
 echo "<div class='aboutusblock'>
             <form name='giftCard' id='giftCard' method='POST' action='rewards.php'>
@@ -126,7 +126,7 @@ echo "<div class='aboutusblock'>
                 <p>Cost: 100 points</p>
                 <label for='reward'><input name='reward' id='reward' type='hidden' value='card'></label>
                 <input type='submit' name='submit' id='submit' value='Redeem'/>
-            </form>         
-          </div><br>";
+            </form>
+          </div><br></center>";
 
 require_once "footer.php";

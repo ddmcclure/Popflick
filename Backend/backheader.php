@@ -28,8 +28,8 @@ require_once "connect.inc.php";
 <div class="topnav">
     <?php
     echo ($currentfile == "index.php") ? "<a class='active' href='index.php'>Home</a>" : "<a href='index.php'>Home</a>";
-    echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
     echo ($currentfile == "employeelogin.php") ? "<a class='active' href='employeelogin.php'>Login</a>" : "<a href='employeelogin.php'>Login</a>";
+    echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
     //if ($_SESSION['emp_accesslvl'] == 3){
     echo ($currentfile == "createemployee.php") ? "<a class='active' href='createemployee.php'>Create Employee</a>" : "<a href='createemployee.php'>Create Employee</a>";
     //}

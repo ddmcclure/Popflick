@@ -7,7 +7,7 @@ $errpwd = "";
 
 if(isset($_SESSION['ID'])) {
     $showform = 0;
-    echo "<h1>Member Account Information</h1>";
+    echo "<center><div class=loginblock><h1>Member Account Information</h1>";
     try {
         $sql = "SELECT * FROM Members WHERE ID = :id";
         $stmt = $pdo->prepare($sql);
@@ -44,7 +44,8 @@ if(isset($_SESSION['ID'])) {
     else {
         echo "Yes</p>";
     }
-    echo "<p>Points Available: $points";
+    echo "<p>Points Available: $points</div></center>
+    <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>";
 }
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
