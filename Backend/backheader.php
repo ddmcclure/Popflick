@@ -10,6 +10,7 @@ ini_set('date.timezone', 'America/New_York');
 date_default_timezone_set('America/New_York');
 
 require_once "connect.inc.php";
+require_once "functions.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,14 +28,16 @@ require_once "connect.inc.php";
 <body>
 <div class="topnav">
     <?php
+    if (isset($_SESSION['emploginid'])){
+      echo ($currentfile == "index.php") ? "<a class='active' href='index.php'>Home</a>" : "<a href='index.php'>Home</a>";
+      echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
+      if ($_SESSION['emploginaccess'] == 3){
+      echo ($currentfile == "createemployee.php") ? "<a class='active' href='createemployee.php'>Create Employee</a>" : "<a href='createemployee.php'>Create Employee</a>";
+      }
+      echo($currentfile == "logout.php") ? "<a class='active' href='logout.php'>Logout</a>" : "<a href='logout.php'>Logout</a>";
+    } else {
     echo ($currentfile == "index.php") ? "<a class='active' href='index.php'>Home</a>" : "<a href='index.php'>Home</a>";
-    echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
     echo ($currentfile == "employeelogin.php") ? "<a class='active' href='employeelogin.php'>Login</a>" : "<a href='employeelogin.php'>Login</a>";
-    //if ($_SESSION['emp_accesslvl'] == 3){
-    echo ($currentfile == "createemployee.php") ? "<a class='active' href='createemployee.php'>Create Employee</a>" : "<a href='createemployee.php'>Create Employee</a>";
-    //}
-    if (isset($_SESSION['emp_id'])) {
-        echo($currentfile == "logout.php") ? "<a class='active' href='logout.php'>Logout</a>" : "<a href='logout.php'>Logout</a>";
     }
     ?>
 </div>
