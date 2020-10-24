@@ -12,10 +12,10 @@ $row = $stmt->fetch();
 <br>
 <br>
 <table>
-	<tr><th>Movie Name</th><td><?php echo $row['MovName'];?></td></tr>
-    <tr><th>Release</th><td><?php echo $row['MovDate'];?></td></tr>
-	<tr><th>Rating</th><td><?php echo $row['MovRating'];?></td></tr>
-    <tr><th>Genre</th><td><?php echo $row['MovGenre'];?></td></tr>
+	<tr><th>Movie Name</th><td><?php echo $row['movie'];?></td></tr>
+    <tr><th>Release</th><td><?php echo $row['see'];?></td></tr>
+	<tr><th>Rating</th><td><?php echo $row['rating'];?></td></tr>
+    <tr><th>Genre</th><td><?php echo $row['genre'];?></td></tr>
 </table>
 <?php
 include_once "footer.php";

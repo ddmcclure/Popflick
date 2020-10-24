@@ -8,7 +8,7 @@ if(isset($_GET['submit']) && !empty($_GET['term'])) {
     $term = trim($_GET['term']);
     echo "<p>Your item is being searched!</p>";
 
-    $sql = "SELECT * FROM Movies WHERE MovDate LIKE '%{$term}%'";
+    $sql = "SELECT * FROM Movies WHERE date LIKE '%{$term}%'";
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue(':term', $term);
     $stmt->execute();
@@ -24,10 +24,10 @@ if(isset($_GET['submit']) && !empty($_GET['term'])) {
         <table>
             <?php
             foreach ($result as $row) {
-                echo "<tr><th>Movie Name</th><td>" . $row['MovName'] . "</td></tr>";
-                echo "<tr><th>Release</th><td>" . $row['MovDate'] . "</td></tr>";
-                echo "<tr><th>Rating</th><td>" . $row['MovRating'] . "</td></tr>";
-                echo "<tr><th>Genre</th><td>" . $row['MovGenre'] . "</td></tr>";
+                echo "<tr><th>Movie Name</th><td>" . $row['movie'] . "</td></tr>";
+                echo "<tr><th>Release</th><td>" . $row['see'] . "</td></tr>";
+                echo "<tr><th>Rating</th><td>" . $row['rating'] . "</td></tr>";
+                echo "<tr><th>Genre</th><td>" . $row['genre'] . "</td></tr>";
                 echo "<td><a href='view.php?ID=".$row['ID']."'>View</a> </td>";
                 echo "<td><a href='rent.php?ID=".$row['ID']."'>Rent</a> </td>";
                 echo "<td><a href='buy.php?ID=".$row['ID']."'>Buy</a> </td>";
