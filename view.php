@@ -19,6 +19,6 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         <tr><th>Genre</th><td><?php echo $row['genre'];?></td></tr>
     </table>
 <?php
-echo"<a href='movie.php'><button>Back to Movie List</button></a>";
+echo"<a href='movieFront.php'><button>Back to Movie List</button></a>";
 include_once "footer.php";
 ?>
