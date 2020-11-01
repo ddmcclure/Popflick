@@ -1,0 +1,13 @@
+INSERT INTO `csci303fa19`.`Movies` (`ID`, `MovName`, `MovDate`, `MovRating`, `MovGenre`) VALUES
+('1', 'Black Panther, '02/16/2018', 'PG-13', 'Action/Adventure'),
+('2', 'Creed', '11/25/2015', 'PG-13', 'Sport/Drama'), 
+('3', 'John Wick', '10/24/2014', 'R', 'Action/Thriller'), 
+('4', 'Star Wars: The Empire Strikes Back', '05/21/1980', 'PG', 'Sci-fi/Action'), 
+('5', 'Frozen', '11/19/2013', 'PG', ' Musical/Family'),
+('6', 'Wonder Woman', '06/02/2017', 'PG-13', 'Action/Adventure'), 
+('7', 'The Matrix', '03/31/1999', 'R', 'Action/Sci-fi'),
+('8', 'The Godfather', '03/24/1972', 'R', 'Drama/Crime'),
+('9', 'The Lord of the Rings: The Fellowship of the Ring', '12/19/2001', 'PG-13', 'Fantasy/Adventure'),
+('10', 'Jurassic Park', '06/11/1993', 'PG-13', 'Adventure/Sci-fi');
+
+

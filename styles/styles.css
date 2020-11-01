@@ -45,6 +45,18 @@ header h1 {
 	font-size:2.25vw;
 }
 
+h1 {
+  font-family: 'Epilogue', sans-serif;
+  font-size:2vw;
+}
+
+h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-size:2.5vw;
+  color: #f2f2f2;
+}
+
+
 p {
 	font-family: 'Epilogue', sans-serif;
 	font-size:1.5vw;
@@ -62,7 +74,6 @@ h6 {
 }
 
 body {
-	margin: 0;
 	font-family: 'Epilogue', sans-serif;
 	background-color: #333;
 
@@ -79,7 +90,10 @@ body {
 header {
 	background-color: #333;
 	color: #f2f2f2;
+}
 
+a:visited {
+color: #ddd;
 }
 
 
@@ -152,20 +166,24 @@ header {
 q {font-style: italic;}
 
 /* Add a blue color to the author */
-.author {color: #e15c64;}
-
-.footerRight{
-	margin: 0;
-	float: right;
-	padding-top: 2%;
-	color: white;
-
+.author {
+  color: #e15c64;
 }
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: white;
+}
+
 .footerLeft {
 	float: left;
-	padding-top: 4%;
-	padding-left: 2%;
-	color: white;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+.footerRight {
+	float: right;
 }
 
 .catalog{
@@ -184,16 +202,42 @@ q {font-style: italic;}
 }
 
 .aboutusblock {
-border-radius: 25px;
+border-radius: 15px;
 background: #e15c64;
+color: #333;
 padding: 20px;
-width: 5%;
+width: 40%;
 height: 5%;
 }
 
+.loginblock {
+border-radius: 15px;
+background: #e15c64;
+color: #333;
+padding: 20px;
+width: 40%;
+}
 
-.footer {
-	background: #e15c64;
+.smallloginblock {
+border-radius: 15px;
+background: #e15c64;
+padding: 20px;
+width: 30%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
 }
 
 
@@ -218,4 +262,75 @@ header h1 {
 	margin: 0;
 	padding-left: 15%;
 }
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table {
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+}
+
+tr, th, td {
+    font-family: "Epilogue", sans-serif;
+    color: white;
+    height: 50px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+
+    background-color: #e15c64;
+    font-family: "Epilogue", sans-serif;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+h2{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    color: white;
+}
+label{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    color: white;
+}
+
+input[type=text]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
+a{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    color: white;
+}
+
+.buttonm{
+    background-color: #e15c64;
 }

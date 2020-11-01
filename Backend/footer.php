@@ -7,15 +7,9 @@
     </div>
 
     <div class="footerRight">
-        <a href="https://www.facebook.com">
         <img src="img/Sweetgrass_facebook-01.png" alt="Logo" style="width:25%;height:25%;">
-      </a>
-      <a href="https://www.instagram.com">
         <img src="img/Sweetgrass_instagram-01.png" alt="Logo" style="width:25%;height:25%;">
-      </a>
-      <a href="https://www.twitter.com">
         <img src="img/Sweetgrass_twitter-01.png" alt="Logo" style="width:25%;height:25%;">
-      </a>
     </div>
   </div>
 </footer>
