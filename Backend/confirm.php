@@ -5,7 +5,7 @@ if ($_GET['state'] == 1) {
     echo "<p><a href='employeelogin.php'>Log in</a></p></div></center>";
 }
 elseif ($_GET['state'] == 2) {
-    echo "<p>Welcome, $_SESSION[fname]!</p>";
+    echo "<p>Welcome, $_SESSION[emploginname]!</p>";
 }
 else {
     echo "<h1>You are not supposed to be here.</h1>";
