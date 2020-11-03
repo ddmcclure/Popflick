@@ -95,13 +95,13 @@ if($showform == 1) {
     <form name="login" id="login" method="POST" action="members.php">
         <table>
             <tr><th><label for="uname">Username:</label><span class="error">*</span></th>
-                <td><input name="uname" required id="uname" type="text" placeholder="Username"
+                <td><input name="uname" id="uname" type="text" placeholder="Username"
                     value="<?php if(isset($uname)) {
                         echo $uname;
                     }?>" /><span class="error"><?php if(isset($erruname)){echo $erruname;}?></span></td>
             </tr>
             <tr><th><label for="pwd">Password:</label><span class="error">*</span></th>
-                <td><input name="pwd" required id="pwd" type="password" placeholder="Required Password"/>
+                <td><input name="pwd" id="pwd" type="password" placeholder="Password"/>
                     <span class="error"><?php if(isset($errpwd)){echo $errpwd;}?></span></td>
             </tr>
             <tr><th><label for="submit"></label></th>
