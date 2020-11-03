@@ -325,6 +325,28 @@ input[type=text]{
     border-radius: 4px;
 }
 
+input[type=password]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
+input[type=email]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
 a{
     text-align: center;
     font-family: "Epilogue", sans-serif;
