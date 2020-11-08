@@ -78,9 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $stmt->bindValue('5', $accesslvl);
             $stmt->execute();
             $showform = 0;
-            echo "<p class='success'>Thank you for entering your information.</p>";
-            echo "<p><a href='index.php'>Log In</a></p>";
-        }
+            echo "<p class='success'>Thank you for entering your information.</p>";        }
         catch (PDOException $e) {
             die($e->getMessage());
         }

@@ -209,6 +209,36 @@ width: 40%;
 height: 5%;
 }
 
+.orderblock {
+  border-radius: 15px;
+  background: #333;
+
+  padding: 20px;
+  width: 70%;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: bold;
+}
+
+.movietable {
+  color: #f2f2f2;
+  border-radius: 15px;
+  background: #e15c64;
+  padding: 3%;
+  width: 70%;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.insidemovieblock {
+  border-radius: 1px ;
+  border: outset 3px #AC3D01;
+  background: #333;
+  table-layout: fixed;
+  float: right;
+  padding: 20px;
+  width: 50%;
+  font-family: 'Epilogue', sans-serif;
+}
+
 .loginblock {
 border-radius: 15px;
 background: #e15c64;
@@ -222,13 +252,23 @@ font-weight: bold;
 .smallloginblock {
 border-radius: 15px;
 background: #e15c64;
+color: white;
 padding: 20px;
 width: 30%;
 }
 
-td {
-  font-family: 'Epilogue', sans-serif;
+table, th, td, tr {
+ border-radius: 15px;
+ border: outset 2px #333;
+ text-align: center;
+ padding: 1em;
+ font-family: 'Epilogue', sans-serif;
+
+}
+
+legend {
   font-weight: bold;
+
 }
 
 input[type=button], input[type=submit], input[type=reset] {

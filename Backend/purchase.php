@@ -1,4 +1,56 @@
 <?php
-require_once "backheader.php";
+//Developer(s): Blakley Parker
+//Date: 11/4/2020
+//Purpose: This is where staff create a order containing the movies the customer wants to buy
 
-require_once "footer.php";
+$showform = 1; //showfrom
+
+  require_once "backheader.php"; //require header file
+	require_once "connect.inc.php";  //require connection file
+
+  //create a result set for movies
+  $sqlselectc = "SELECT * from movies";//SQL string
+  $resultc = $pdo->prepare($sqlselectc); //prep statement
+  $resultc->execute();//execute statement
+  $counter = 0
+?>
+  <br><br><br><br><br><br><br><br>
+  <center>
+  <div class="movietable">
+    <legend>Enter Movies to Purchase
+    <table>
+			<?php
+				echo '<tr>';
+				while ($rowc = $resultc->fetch() )//gets all movies
+					{
+					echo '<th valign = "top" align = "center">' . $rowc['movie'] . '<br>';
+					echo '<table class="insidemovietable">';
+					$sqlselectp = "SELECT * from movies where ID = :bvID AND inventory <= 1";//SQL string
+					$resultp = $pdo->prepare($sqlselectp);//prepare statment
+					$resultp->bindValue(':bvID', $rowc['ID']); //bind value
+					$resultp->execute();//execute prepared statement
+					while ($rowp = $resultp->fetch() )
+						{
+							//form below are added values to each button
+						echo '<tr><td>';
+						echo '<form action = "' . $_SERVER['PHP_SELF'] . '" method = "post">';
+						echo '<input type = "hidden" name = "movieid" value = "'. $rowp['ID'] .'">';
+						echo '<input type = "hidden" name = "movieprice" value = "'. $rowp['price'] .'">';
+						echo '<input type="submit" class="button" name="moviesubmit" value="'. $rowp['movie'] . ' - $'
+							. $rowp['price'] .'">';
+						echo '</form>';
+						echo '</td></tr>';
+						}
+					echo '</table></th>';
+						$counter = $counter +1;
+					if ($counter >= 4){
+						$counter = 0;
+						echo '</tr><tr>';
+					}
+				}
+echo '</tr>';
+echo'</table>';
+echo'</center>';
+echo'<br><br><br><br><br><br>';
+  include_once 'footer.php';//include to footer once
+?>

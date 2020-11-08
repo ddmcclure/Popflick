@@ -40,7 +40,7 @@ if(isset ($_POST['submit'])) {
 
 		if($count < 1)
 		{
-			echo '<p>The username or password is incorrect</p>'; //print error
+			echo '<center><p>The username or password is incorrect</p></center>'; //print error
 		}
 		else
 		{
