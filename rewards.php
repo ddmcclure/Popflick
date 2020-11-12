@@ -88,6 +88,8 @@ if ($success == 1) {
     echo "<p class='success'>Reward redeemed successfully!</p>";
 }
 
+echo "<div><p>Points Available: $points</p></div>";
+
 if ($lateFee == 1) {
     echo "<div class='aboutusblock'>
             <form name='lateFeeForgive' id='lateFeeForgive' method='POST' action='rewards.php'>
