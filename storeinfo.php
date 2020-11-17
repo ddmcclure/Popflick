@@ -3,7 +3,7 @@ include_once ("header.php");
 ?>
 
   <center>
-    <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+    <br><br>
     <div class="aboutusblock">
         <p>
             Are you tired of poor quality movies on Netflix? Does your streaming service of choice
@@ -17,9 +17,7 @@ include_once ("header.php");
             Popflick membership today!
         </p>
     </div>
-    <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
+    <br><br>
 </center>
 
 <?php

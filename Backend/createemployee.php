@@ -17,50 +17,51 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $accesslvl = $_POST['accesslvl'];
 
     if (empty($fname)) {
-        $errfname = "<span class='error'>Your first name is required</span>";
+        $errfname = "<center><span class='error'>Your first name is required</span></center>";
         $errmsg = 1;
     }
 
     if (empty($lname)) {
-        $errlname = "<span class='error'>Your last name is required</span>";
+        $errlname = "<center><span class='error'>Your last name is required</span></center>";
         $errmsg = 1;
     }
 
     if (empty($uname)) {
-        $erruname = "<span class='error'>The username is required</span>";
+        $erruname = "<center><span class='error'>The username is required</span></center>";
         $errmsg = 1;
     }
 
     if (empty($pwd)) {
-        $errpwd = "<span class='error'>The password is required</span>";
+        $errpwd = "<center><span class='error'>The password is required</span></center>";
         $errmsg = 1;
     }
 
     if (empty($pwd2)) {
-        $errpwd2 = "<span class='error'>You must confirm your password</span>";
+        $errpwd2 = "<center><span class='error'>You must confirm your password</span></center>";
         $errmsg = 1;
     }
 
     if (empty($accesslvl)) {
-        $errpwd2 = "<span class='error'>The access level is required</span>";
+        $erraccesslvl = "<center><span class='error'>The access level is required</span></center>";
         $errmsg = 1;
     }
 
     if ($pwd != $pwd2) {
-        $errpwd2 = "<span class='error'>The passwords do not match</span>";
+        $errpwd2 = "<center><span class='error'>The passwords do not match</span></center>";
         $errmsg = 1;
     }
+
 
 
     $sql = "SELECT * FROM employee WHERE emp_user = ?";
     $count = checkDup($pdo, $sql, $uname);
     if($count > 0) {
         $errmsg = 1;
-        $erruname = "<span class='error'>The username is already taken.</span>";
+        $erruname = "<center><span class='error'>The username is already taken.</span></center>";
     }
 
     if($errmsg == 1){
-        echo "<p class='error'>There are errors.  Please make corrections and resubmit.</p>";
+        echo "<center><p class='error'>There are errors.  Please make corrections and resubmit.</p></center>";
     }
     else{
         echo "<p class='success'>Employee creation was successful!</p>";
@@ -87,16 +88,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($showform == 1) {
     ?>
     <center>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="loginblock">
     <div>
             <h1>Employee Creation</h1>
     </div>
     <form name="employeeform" id="employeeform" method="POST" action="createemployee.php">
     <?php
-    if (isset($erruname)) {
-        echo "$erruname<br>";
+    if (isset($errfname)) {
+        echo "$errfname<br>";
     }
     ?>
     <label for="fname">First Name:</label><input type="text" name="fname" id="fname" maxlength="255" size="50" value="<?php if(isset($fname)) {echo $fname;}?>"><br>
@@ -105,31 +104,32 @@ if ($showform == 1) {
         echo "$errlname<br>";
     }
     ?>
-    <br><label for="lname">Last Name:</label><input type="text" name="lname" id="lname" maxlength="255" size="50" value="<?php if(isset($lname)) {echo $lname;}?>"><br>
+    <label for="lname">Last Name:</label><input type="text" name="lname" id="lname" maxlength="255" size="50" value="<?php if(isset($lname)) {echo $lname;}?>"><br>
     <?php
-    if (isset($errphone)) {
-        echo "$errphone<br>";
+    if (isset($erruname)) {
+        echo "$erruname<br>";
     }
     ?>
-    <br><label for="username">Username:</label><input type="text" name="username" id="username" maxlength="255" size="50" value="<?php if(isset($uname)) {echo $uname;}?>"><br>
+    <label for="username">Username:</label><input type="text" name="username" id="username" maxlength="255" size="50" value="<?php if(isset($uname)) {echo $uname;}?>"><br>
     <?php
-    if (isset($erremail)) {
-        echo "$erremail<br>";
+    if (isset($errpwd)) {
+        echo "$errpwd<br>";
     }
     ?>
-    <br><label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>"><br><br>
+    <label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>"><br>
     <?php
     if (isset($errpwd2)) {
         echo "$errpwd2<br>";
     }
     ?>
-    <br><label for="conpass">Confirm Password:</label><input type="password" name="conpass" id="conpass" maxlength="255" size="50">
-    <br>
+    <label for="conpass">Confirm Password:</label><input type="password" name="conpass" id="conpass" maxlength="255" size="50">
+    <br><br>
     <?php
     if (isset($erraccesslvl)) {
-        echo "$erraccesslvl<br>";
+        echo "$erraccesslvl";
     }
     ?>
+
     <p>Please select Access Level:</p>
     <input type="radio" id="1" name="accesslvl" value="1">
     <label for="1">Entry Level</label>
@@ -137,9 +137,8 @@ if ($showform == 1) {
     <label for="2">Associate</label>
     <input type="radio" id="3" name="accesslvl" value="3">
     <label for="3">Manager</label>
-    <br>
-
-    <br><input type="submit" name="submit" id="submit" value="Submit"/>
+    <br><br>
+    <br><input type="submit" name="submit" id="submit" value="Submit Form"/>
     </form>
   </div>
   </center>

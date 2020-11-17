@@ -220,22 +220,22 @@ height: 5%;
 }
 
 .movietable {
-  color: #f2f2f2;
+  color: #333;
   border-radius: 15px;
   background: #e15c64;
   padding: 3%;
   width: 70%;
   font-family: 'Epilogue', sans-serif;
+  font-size: 1.05vw;
 }
 
 .insidemovieblock {
-  border-radius: 1px ;
+  border-radius: 15px ;
   border: outset 3px #AC3D01;
   background: #333;
   table-layout: fixed;
-  float: right;
   padding: 20px;
-  width: 50%;
+  width: 60%;
   font-family: 'Epilogue', sans-serif;
 }
 
@@ -257,11 +257,11 @@ padding: 20px;
 width: 30%;
 }
 
-table, th, td, tr {
- border-radius: 15px;
- border: outset 2px #333;
+table, th, tr{
+ border-radius: 1em;
+ border: outset .3em #333;
  text-align: center;
- padding: 1em;
+ padding: 1.5em;
  font-family: 'Epilogue', sans-serif;
 
 }
@@ -279,40 +279,40 @@ input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font-size: 1vw;
+  font-family: "Epilogue", sans-serif;
+
+}
+
+input[type=text]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
+input[type=password]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
+h3 {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.5vw;
+  color: #f2f2f2;
 }
 
 #map {
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
-
-
-@media screen and (max-width: 403px) {
- .topnav a {
-  margin: 0;
-  float: none;
-  width: 100%;
-}
-header h1 {
-	background-size: 8vw;
-	margin: 0;
-	padding-left: 15%;
-	padding-top: 10%;
-	padding-bottom: 5%;
-}
-}
-
-@media screen and (max-width: 700px) {
-
-header h1 {
-	margin: 0;
-	padding-left: 15%;
-}
-}
-
-.error {
-    color: red;
-}
-
-.success {
-    color: green;
 }

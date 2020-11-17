@@ -85,13 +85,13 @@ if($showform == 1) //if  user hasn't logged in
 	<table>
 		<tr>
 			<td>Username:</td>
-			<td><input type="text" name="uname" id = "uname" required></td>
+			<td><input type="text" name="uname" id = "uname" placeholder="Username" maxlength="255" size="50" required></td>
 		</tr><tr>
 			<td>Password:</td>
-			<td><input type="password" name="password" id = "password" required></td>
+			<td><input type="password" name="password" id = "password" placeholder="Password" maxlength="255" size="50" required></td>
 		</tr><tr>
 			<td></td>
-			<td><input type ="submit" class="button" name= "submit" value = "submit"></td>
+			<td><input type ="submit" class="button" name= "submit" value = "Login" ></td>
 		</tr>
 	</table>
 </div>
