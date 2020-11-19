@@ -7,6 +7,7 @@ $errpwd = "";
 
 if(isset($_SESSION['ID'])) {
     $showform = 0;
+    echo"<br><br><br><br>";
     echo "<center><div class=loginblock><h1>Member Account Information</h1>";
     try {
         $sql = "SELECT * FROM Members WHERE ID = :id";
@@ -45,7 +46,7 @@ if(isset($_SESSION['ID'])) {
         echo "Yes</p>";
     }
     echo "<p>Points Available: $points</div></center>
-    <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>";
+    <br><br>";
 }
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -90,7 +91,7 @@ if($showform == 1) {
 ?>
 
     <center>
-      <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+      <br><br><br><br>
     <div class="loginblock">
     <form name="login" id="login" method="POST" action="members.php">
         <table>
@@ -113,8 +114,7 @@ if($showform == 1) {
     <p>Not a member? <a href="createmember.php">Click here</a> to learn more about our membership program, and sign up to be a member!</p>
     </div>
   </center>
-  <p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php
 }
 require_once "footer.php";

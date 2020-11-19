@@ -33,6 +33,7 @@ require_once "functions.inc.php";
       echo ($currentfile == "purchase.php") ? "<a class='active' href='purchase.php'>Purchase</a>" : "<a href='purchase.php'>Purchase</a>";
       if ($_SESSION['emploginaccess'] == 3){
       echo ($currentfile == "createemployee.php") ? "<a class='active' href='createemployee.php'>Create Employee</a>" : "<a href='createemployee.php'>Create Employee</a>";
+      echo ($currentfile == "manageemployee.php") ? "<a class='active' href='manageemployee.php'>Manage Employee</a>" : "<a href='manageemployee.php'>Manage Employee</a>";
       }
       echo($currentfile == "logout.php") ? "<a class='active' href='logout.php'>Logout</a>" : "<a href='logout.php'>Logout</a>";
     } else {

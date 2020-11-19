@@ -88,10 +88,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($showform == 1) {
     ?>
     <center>
+    <h1>Employee Creation</h1>
     <div class="loginblock">
-    <div>
-            <h1>Employee Creation</h1>
-    </div>
     <form name="employeeform" id="employeeform" method="POST" action="createemployee.php">
     <?php
     if (isset($errfname)) {
@@ -116,7 +114,7 @@ if ($showform == 1) {
         echo "$errpwd<br>";
     }
     ?>
-    <label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>"><br>
+    <label for="pass">Password:</label><input type="password" name="pass" id="pass" maxlength="255" size="50" value="<?php if(isset($pwd)) {echo $pwd;}?>">
     <?php
     if (isset($errpwd2)) {
         echo "$errpwd2<br>";
@@ -129,7 +127,7 @@ if ($showform == 1) {
         echo "$erraccesslvl";
     }
     ?>
-
+    <center>
     <p>Please select Access Level:</p>
     <input type="radio" id="1" name="accesslvl" value="1">
     <label for="1">Entry Level</label>

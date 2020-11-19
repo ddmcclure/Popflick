@@ -50,6 +50,7 @@ include_once ("header.php");
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
+    <br><br><br><br>
 
 <?php
 include_once ("footer.php");

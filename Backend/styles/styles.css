@@ -51,7 +51,8 @@ header h1 {
 
 h1 {
   font-family: 'Epilogue', sans-serif;
-  font-size:2vw;
+  font-size:2.25vw;
+  color: #f2f2f2;
 }
 h2 {
   font-family: 'Epilogue', sans-serif;
@@ -93,6 +94,40 @@ header {
 	background-color: #333;
 	color: #f2f2f2;
 
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-family: "Epilogue", sans-serif;
+}
+
+input[type=text]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
+}
+
+input[type=password]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
 }
 
 
@@ -209,6 +244,16 @@ width: 40%;
 height: 5%;
 }
 
+.employeeblock {
+border-radius: 15px;
+background: #e15c64;
+color: #333;
+font-weight: bold;
+padding: 20px;
+width: 40%;
+height: 5%;
+}
+
 .orderblock {
   border-radius: 15px;
   background: #333;
@@ -223,11 +268,23 @@ height: 5%;
   color: #333;
   border-radius: 15px;
   background: #e15c64;
-  padding: 3%;
-  width: 70%;
+  padding: 1%;
+  width: 75%;
   font-family: 'Epilogue', sans-serif;
-  font-size: 1.05vw;
+  font-size: .5vw;
 }
+.movietable input[type=button], input[type=submit], input[type=reset] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 1vw;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-family: "Epilogue", sans-serif;
+}
+
 
 .insidemovieblock {
   border-radius: 15px ;
@@ -244,9 +301,23 @@ border-radius: 15px;
 background: #e15c64;
 color: #333;
 padding: 20px;
-width: 40%;
+width: 30%;
 font-family: 'Epilogue', sans-serif;
 font-weight: bold;
+text-align:left;
+margin:0 auto;
+}
+
+
+.loginblock input[type=text] input[type=password]{
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #e15c64;
+    border-radius: 4px;
 }
 
 .smallloginblock {
@@ -257,9 +328,8 @@ padding: 20px;
 width: 30%;
 }
 
-table, th, tr{
+table, th{
  border-radius: 1em;
- border: outset .3em #333;
  text-align: center;
  padding: 1.5em;
  font-family: 'Epilogue', sans-serif;
@@ -271,46 +341,15 @@ legend {
 
 }
 
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 1vw;
-  font-family: "Epilogue", sans-serif;
 
-}
-
-input[type=text]{
-    text-align: center;
-    font-family: "Epilogue", sans-serif;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #e15c64;
-    border-radius: 4px;
-}
-
-input[type=password]{
-    text-align: center;
-    font-family: "Epilogue", sans-serif;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #e15c64;
-    border-radius: 4px;
-}
 
 h3 {
   font-family: 'Epilogue', sans-serif;
   font-size: 1.5vw;
   color: #f2f2f2;
 }
+
+
 
 #map {
         height: 400px;  /* The height is 400 pixels */

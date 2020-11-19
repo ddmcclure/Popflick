@@ -72,15 +72,10 @@ if($showform == 1) //if  user hasn't logged in
 //HTML below is the login form
 ?>
 
-<center>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br><center>
+<h1>Employee Login</h1>
+</center>
 <div class="loginblock">
-<div>
-        <h1>Employee Login</h1>
-</div>
-<!-- <p>You are not logged in.  Please log in</p> -->
-
 <form name = "loginForm" id = "loginForm" method = "post" action = "employeelogin.php">
 	<table>
 		<tr>
@@ -95,9 +90,7 @@ if($showform == 1) //if  user hasn't logged in
 		</tr>
 	</table>
 </div>
-</center>
-<p>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </form>
 <?php
 }
