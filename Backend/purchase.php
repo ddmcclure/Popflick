@@ -40,7 +40,7 @@ $showform = 1; //showfrom
 						}
 					echo '</th>';
 						$counter = $counter +1;
-					if ($counter >= 4){
+					if ($counter >= 3){
 						$counter = 0;
 						echo '</tr><tr>';
 					}
@@ -49,6 +49,6 @@ echo '</tr>';
 echo'</table>';
 echo "</div>";
 echo'</center>';
-echo'<br><br>';
+echo'<br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
   include_once 'footer.php';//include to footer once
 ?>
