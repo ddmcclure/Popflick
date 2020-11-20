@@ -8,11 +8,12 @@ $showform = 1; //showfrom
   require_once "backheader.php"; //require header file
 	require_once "connect.inc.php";  //require connection file
 
+
   //create a result set for movies
   $sqlselectc = "SELECT * from movies";//SQL string
   $resultc = $pdo->prepare($sqlselectc); //prep statement
   $resultc->execute();//execute statement
-  $counter = 0
+  $counter = 0;
 ?>
   <br><br>
   <center>
@@ -32,6 +33,7 @@ $showform = 1; //showfrom
 							//form below are added values to each button
 						echo '<td>';
 						echo '<form action = "' . $_SERVER['PHP_SELF'] . '" method = "post">';
+            //echo '<input type = "hidden" name = "tranitem_id" value = "'. $formfield['fftranitem_id'] .'">';
 						echo '<input type = "hidden" name = "movieid" value = "'. $rowp['ID'] .'">';
 						echo '<input type = "hidden" name = "movieprice" value = "'. $rowp['price'] .'">';
 						echo '<input type="submit" class="button" name="moviesubmit" value="'. $rowp['movie'] . ' - $'. $rowp['price'] .'">';
